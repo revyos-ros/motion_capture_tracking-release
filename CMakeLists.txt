@@ -5,6 +5,8 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+set(CMAKE_INSTALL_RPATH "$ORIGIN")
+
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -67,6 +69,14 @@ target_compile_features(motion_capture_tracking_node PUBLIC c_std_99 cxx_std_17)
 
 install(TARGETS motion_capture_tracking_node
   DESTINATION lib/${PROJECT_NAME})
+
+# The precompiled libNatNet library is only available for x64 Linux
+if ((CMAKE_SYSTEM_NAME STREQUAL "Linux") AND (CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64"))
+  install(FILES 
+    ${CMAKE_CURRENT_SOURCE_DIR}/deps/libmotioncapture/deps/NatNetSDKCrossplatform/lib/ubuntu/libNatNet.so
+    DESTINATION lib/${PROJECT_NAME}
+  )
+endif()
 
 # if(BUILD_TESTING)
 #   find_package(ament_lint_auto REQUIRED)
