@@ -1,3 +1,28 @@
+## motion_capture_tracking (jazzy) - 1.0.5-1
+
+The packages in the `motion_capture_tracking` repository were released into the `jazzy` distro by running `/home/z572/gits/revyos-ros/venv/bin/bloom-release -r jazzy motion_capture_tracking --override-release-repository-push-url git@github.com:revyos-ros/motion_capture_tracking-release` on `Tue, 25 Jun 2024 17:10:29 -0000`
+
+These packages were released:
+- `motion_capture_tracking`
+- `motion_capture_tracking_interfaces`
+
+Version of package(s) in repository `motion_capture_tracking`:
+
+- upstream repository: https://github.com/IMRCLab/motion_capture_tracking.git
+- release repository: https://github.com/revyos-ros/motion_capture_tracking-release.git
+- rosdistro version: `1.0.5-1`
+- old version: `1.0.3-3`
+- new version: `1.0.5-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## motion_capture_tracking (humble) - 1.0.5-1
 
 The packages in the `motion_capture_tracking` repository were released into the `humble` distro by running `/home/whoenig/.local/bin/bloom-release --rosdistro humble motion_capture_tracking` on `Tue, 12 Mar 2024 19:27:30 -0000`
